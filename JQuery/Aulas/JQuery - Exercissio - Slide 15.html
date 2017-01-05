@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+
+</head>
+<body>
+<form>
+	<input type="text" name="username" id="username" placeholder="Username">
+	<input type="password" name="password" id="password" placeholder="Password">
+	<input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password"></br>
+	Birth Date: <input type="date" name="birth_date" id="birth_date"></br>
+	<input type="number" name="credit_card" id="credit_card" placeholder="Credit Card Number"></br>
+	<button type="reset">Clear</button>
+	<button type="submit" id="submit">Submit</button>
+</form>
+
+</body>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+  		$( "#username" ).focus();
+  		//autofocus
+  		$("#confirm_password").focus(function(){
+  			$("#username").val($("#username").val() + "JJ")
+  		})
+
+  		$("#confirm_password").focusout(function(){
+	 		if ($("#password").val() != $("#confirm_password").val()){
+	  			alert("Passwords diferentes!")
+	  			$('#username').val('');
+	  			$('#password').val('');
+	  			$('#confirm_password').val('');
+	  		}
+  		})
+
+
+  		$("#submit").click(function(){
+  			alert($("#username").val())
+  		})
+ 
+ 		
+
+	});
+</script>
+
+</html>

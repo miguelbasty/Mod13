@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(window).on('load',function(){
+            $('input[name="user"]').focus();
+        });
+        
+        $(document).ready(function(){
+            
+            $( "#datepicker" ).datepicker();
+
+
+            $('input[name="user"]').focusout(function(){
+               var codigo=$('input[name="user"]').val();
+               $('input[name="user"]').val("JJ "+codigo);
+            });
+
+            $('input[name="repass"]').focusout(function(){
+               if ($('input[name="pass"]').val() != $('input[name="repass"]').val()){
+                    $('input[name="pass"]').val("");
+                    $('input[name="repass"]').val("");
+               };
+            });
+       });
+       $(window).on('submit',function(){
+            //alert("ola");
+            alert("Nome: " + $('input[name="user"]').val());
+            var dia=$('input[name="dia"]').val();
+            var mes=$('input[name="mes"]').val();
+            var ano=$('input[name="ano"]').val();
+            alert("Idade:" + (2016-ano)); // falta concluir...
+        });
+
+    </script>
+</head>
+<body>
+    <form id="o">
+        Username:<br><input type="text" size=30 name="user"><br><br>
+        Password:<br><input type="text" size=30 name="pass"><br><br>
+        Re-type password:<br><input type="text" size=30 name="repass"><br><br>
+        Data de Nascimento:<br> Dia: <input type="text" size=1 name="dia"> Mês: <input type="text" size=1 name="mes"> Ano: <input type="text" size=1 name="ano"><br><br>
+        <!--Data: <br><input type="text" id="datepicker" size=30></p>-->
+        Nº do cartão de crédito:<br><input type="text" size=30><br><br>
+        <input type="submit" value="Submeter"> 
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
+
+
+

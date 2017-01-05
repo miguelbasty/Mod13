@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<tittle> Aula1 - JQuery </tittle>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+	</head>
+
+	<script>
+		$(document).ready(function(){
+			$('#texto').text("Ola");
+			$('div').append(" turma12C");
+			//$('div#texto').hide();
+			$("#boton").mouseenter(function(){
+				$("div").hide();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	</br>
+	Bom dia!
+	</br>
+	<div>
+		Texto1
+	</div>
+	<div id="texto">
+	</div>
+	<img src="../imagens/boton.png" id="boton">
+</body>
+</html>
+
+
+<!--criar 2 divs, uma com o "Texto1" e outra vazia

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flores1</title>
+</head>
+<body>
+<div>
+
+<div><a href="Load_Fragments_xml1.html" name="pedro" id="pedro">Pedro</a></div>
+<div><a href="Load_Fragments_xml2.html" name="pedrod" id="pedrod">Pedro D.</a></div>
+<div><a href="#" name="tiago" id="tiago">Tiago</a></div>
+
+<div id="img">
+<img src="../Imagens/pedro.jpg">
+<!--<img src="../Imagens/pedrod.jpg">-->
+<div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="../jquery-3.1.1.min.js">
+$("div a").click(function(){
+	$("#img").load(this.href + "#img");
+	//return false;
+})
+</script>
+
+</html>

@@ -1,0 +1,72 @@
+JQuery é uma biblioteca de Javascript -
+"Write less, do more" - que possui vários métodos que facilitam a programação.
+
+. Client - Side VS Server - Side
+
+	Javascript VS Java VS JQuery
+
+Incluir Biblioteca
+
+	a) CDN - Content Delivery Network https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js
+	b) Download JQuery.com
+
+Guardar ficheiros como:
+aula_jquery1.html
+...
+
+Como "chamar":
+<head>
+<script src="jquery_3.1.1.min.js"></script>
+</head>
+
+. Sintaxe
+
+O JQuery opera sobre alguns elementos HTML, aplicando ações/funções/métodos.
+
+
+$(Selector).action()
+	$ = acesso jquery
+	selector = elemento html
+	action = ação sobre os elementos
+
+$(document).ready(fucntion()){
+	//funções jquery
+}
+
+
+Alguns seletores e seu significado:
+a) selectores sobre elementos:
+	$('p'), $('dir'), $('a'), $('*')
+b) selectores sobre identificadores:
+	$('#botao'), $('#topico1')
+c) selectores sobre classes:
+	$('.test')
+
+EXEMPLOS:
+click()
+mouseenter()
+mouseleave()
+keypress()
+load, scroll, focus, blur...
+
+1º $('p').click();
+
+2º Passar uma função através do evento, que ditará o que vai acontecer, por exemplo:
+__________________________________________
+
+$('p').click(function(){
+	$(this).hide();
+
+});
+ 
+ OU
+
+ $('#p1').mouseleave(fucntion(){
+ 	alert("Adeus!")
+ });
+
+___________________________________________
+
+
+
+multithreading, responsive.

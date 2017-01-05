@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<tittle> Aula1 - JQuery </tittle>
+	<script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+	</head>
+
+	<script>
+		$(document).ready(function(){
+			$('#texto').text("Ola");
+			$('div').append(" turma12C");
+			//$('div#texto').hide();
+			$("#boton").mouseenter(function(){
+				$(this).hide();
+			});
+			$("#paque").click(function(){
+				$("#boton").toggle();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<a href="#" id="paque">Aparece/Desaparece</a>
+	</br>
+	Bom dia!
+	</br>
+	<div>
+		Texto1
+	</div>
+	<div id="texto">
+	</div>
+	<img src="../imagens/boton.png" id="boton">
+</body>
+</html>
